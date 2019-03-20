@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vexflow shifting score</title>
+
+        <script src="js/motionAnalysis.js" type="text/javascript"></script>
+        <script src="js/tonalityDetection.js" type="text/javascript"></script>
+        <script src="js/MIDI.js" type="text/javascript"></script>
+        <script src="lib/vue.js" type="text/javascript"></script>
+        <script src="lib/vexflow-min.js" type="text/javascript"></script>
+        <script src="js/util.js" type="text/javascript"></script>
+        <script src="js/chordDetection.js" type="text/javascript"></script>
+        <script src="js/chordRecognition.js" type="text/javascript"></script>
+        <script src="js/sound.js" type="text/javascript"></script>
+        <script src="js/timer.js" type="text/javascript"></script>
+        <script src="js/changeLang.js" type="text/javascript"></script>
+        <link href="index.css" rel="stylesheet" type="text/css">
+        <link href="switches.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+<body style="background-color: palegoldenrod">
+	<div id="titlediv"><h2 id="titleh">hold on the chord to plot it</h2></div>
+  <div id="lang" onclick="changeLang()">ENG</div>
+  <div id="c0">
+    <label id="timer">Timer: </label>
+    <meter id = "meter" max="500"></meter>
+  </div>
+<br>
+  <div>
+   <b id = "chordlbl"></b>
+   <div id = "nameChord"></div>
+</div>
+<br>
+  <b id="tonalitylbl">Tonality: </b>
+  <div id="tonaldiv"></div>
+  <div id="undodiv"> <button class="btn" id="undobutton" onclick="undo()"> <i class="fa fa-undo"></i> Undo </button> </div>
+  <br><br><br>
+  <div id="staves">
+    <div id="s0"></div>
+  	<div id="s1"></div>
+  </div>
+  <br>
+
+
+
+  <div id="bottom">
+
+        <div id="logarea">
+
+        </div>
+
+        <div id="buttonlabels">
+          
+        </div>
+
+        <div id="buttons"><!-- Rounded switch -->
+            <label class="switch">
+              <input type="checkbox" id="switch_tritone">
+              <span class="slider round"></span></label>
+            <label class="switch">
+              <input type="checkbox" id="switch_hiddens">
+              <span class="slider round"></span></label>
+            <label class="switch">
+              <input type="checkbox" id="switch_tonal">
+              <span class="slider round"></span></label>
+            <label class="switch">
+              <input type="checkbox" id="switch_cf">
+              <span class="slider round"></span></label>
+        </div>
+
+  </div>
+
+
+  <script src="js/index.js"></script>
+  <script src="js/midiKeys.js" type="text/javascript"></script>
+
+
+
+</body>
+
+
+
+</html>
